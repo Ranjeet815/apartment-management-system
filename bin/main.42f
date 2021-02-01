@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Form name="main" build="3.20.08" sqlDbName="aptapp" width="113" height="9">
+  <TopMenu>
+    <TopMenuGroup name="search" text="Search" image="find.png">
+      <TopMenuCommand name="find" text="find"/>
+      <TopMenuCommand name="new" text="new"/>
+      <TopMenuCommand name="save" text="save"/>
+      <TopMenuSeparator/>
+      <TopMenuCommand name="quit" text="quit"/>
+    </TopMenuGroup>
+    <TopMenuGroup name="apt" text="Apprtment" image="/home/ranjeet/Downloads/APT_APP/images/aa.jpeg">
+      <TopMenuCommand name="apprtment" text="Apprtment" image="/home/ranjeet/Downloads/APT_APP/images/aa.jpeg"/>
+    </TopMenuGroup>
+    <TopMenuGroup name="ow" text="Owner" image="/home/ranjeet/Downloads/APT_APP/images/o.jpeg">
+      <TopMenuCommand name="owner" text="Owner" image="/home/ranjeet/Downloads/APT_APP/images/o.jpeg"/>
+    </TopMenuGroup>
+    <TopMenuGroup name="rst" text="Resident" image="/home/ranjeet/Downloads/APT_APP/images/R.jpeg">
+      <TopMenuCommand name="resident" text="Resident" image="/home/ranjeet/Downloads/APT_APP/images/R.jpeg"/>
+    </TopMenuGroup>
+    <TopMenuGroup name="pmt" text="Payment" image="/home/ranjeet/Downloads/APT_APP/images/p.jpeg">
+      <TopMenuCommand name="payment" text="Payment" image="/home/ranjeet/Downloads/APT_APP/images/p.jpeg"/>
+    </TopMenuGroup>
+    <TopMenuGroup name="amt" text="Amenity" image="/home/ranjeet/Downloads/APT_APP/images/amt.webp">
+      <TopMenuCommand name="amenity" text="Amenity" image="/home/ranjeet/Downloads/APT_APP/images/amt.webp"/>
+    </TopMenuGroup>
+    <TopMenuGroup name="ass" text="Association" image="/home/ranjeet/Downloads/APT_APP/images/ass.jpeg">
+      <TopMenuCommand name="association" text="Association" image="/home/ranjeet/Downloads/APT_APP/images/ass.jpeg"/>
+    </TopMenuGroup>
+    <TopMenuGroup name="hpt" text="Helpdesk" image="/home/ranjeet/Downloads/APT_APP/images/hpt.jpeg">
+      <TopMenuCommand name="helpdesk" text="Helpdesk" image="/home/ranjeet/Downloads/APT_APP/images/hpt.jpeg"/>
+    </TopMenuGroup>
+  </TopMenu>
+  <HBox>
+    <Grid width="113" height="9">
+      <Label text="                  " posY="0" posX="1" gridWidth="20"/>
+      <Label name="header_label1" width="4" text="  Apprtment Management System  " justify="center" style="fontsize3" posY="1" posX="100" gridWidth="4">
+        <LStr text="  Apprtment Management System  "/>
+      </Label>
+      <Label text="                   " posY="2" posX="1" gridWidth="21"/>
+      <Label text="                  " posY="3" posX="1" gridWidth="20"/>
+      <Label text="                  " posY="3" posX="23" gridWidth="20"/>
+      <Label text="                  " posY="4" posX="1" gridWidth="20"/>
+      <Label text="                                                " posY="4" posX="23" gridWidth="50"/>
+      <HBox posY="4" posX="100" gridWidth="12">
+        <Image name="txt002" width="6" image="/home/ranjeet/Downloads/APT_APP/images/apt.webp"/>
+        <Label text="    "/>
+        <SpacerItem/>
+      </HBox>
+      <Label text="                  " posY="5" posX="1" gridWidth="20"/>
+      <Label text="                                                " posY="5" posX="23" gridWidth="50"/>
+      <Label text="                  " posY="6" posX="1" gridWidth="20"/>
+      <Label text="                                                " posY="6" posX="23" gridWidth="50"/>
+      <Label name="header_label1" width="5" text="I2GEN" justify="center" style="fontsize1" posY="6" posX="99" gridWidth="5">
+        <LStr text="I2GEN"/>
+      </Label>
+      <Label text="                  " posY="7" posX="1" gridWidth="20"/>
+      <Label text="                                                " posY="7" posX="23" gridWidth="50"/>
+      <Label text="                  " posY="8" posX="1" gridWidth="20"/>
+      <Label text="                                                " posY="8" posX="23" gridWidth="50"/>
+    </Grid>
+  </HBox>
+</Form>

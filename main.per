@@ -1,0 +1,62 @@
+SCHEMA aptapp
+
+TOPMENU
+  GROUP search (TEXT="Search",IMAGE="find.png")
+    COMMAND find (TEXT="find")
+    COMMAND new  (TEXT="new")
+    COMMAND save (TEXT="save")
+    SEPARATOR
+    COMMAND quit (TEXT="quit")
+  END
+  GROUP APT (TEXT="Apprtment",IMAGE = "/home/ranjeet/Downloads/APT_APP/images/aa.jpeg")
+   COMMAND apprtment (TEXT ="Apprtment",IMAGE = "/home/ranjeet/Downloads/APT_APP/images/aa.jpeg")
+  END
+ GROUP Ow (TEXT="Owner",IMAGE = "/home/ranjeet/Downloads/APT_APP/images/o.jpeg")
+ COMMAND Owner(TEXT ="Owner",IMAGE = "/home/ranjeet/Downloads/APT_APP/images/o.jpeg")
+ END
+
+ GROUP rst (TEXT="Resident",IMAGE = "/home/ranjeet/Downloads/APT_APP/images/R.jpeg")
+ COMMAND resident(TEXT ="Resident",IMAGE = "/home/ranjeet/Downloads/APT_APP/images/R.jpeg")
+ END
+
+ GROUP pmt (TEXT="Payment",IMAGE = "/home/ranjeet/Downloads/APT_APP/images/p.jpeg")
+ COMMAND payment(TEXT ="Payment",IMAGE = "/home/ranjeet/Downloads/APT_APP/images/p.jpeg")
+ END
+ 
+ GROUP amt (TEXT="Amenity", IMAGE = "/home/ranjeet/Downloads/APT_APP/images/amt.webp")
+ COMMAND amenity(TEXT ="Amenity", IMAGE = "/home/ranjeet/Downloads/APT_APP/images/amt.webp")
+ END
+  GROUP ass (TEXT="Association", IMAGE = "/home/ranjeet/Downloads/APT_APP/images/ass.jpeg")
+ COMMAND association(TEXT ="Association",IMAGE = "/home/ranjeet/Downloads/APT_APP/images/ass.jpeg")
+ END
+ GROUP hpt (TEXT="Helpdesk", IMAGE = "/home/ranjeet/Downloads/APT_APP/images/hpt.jpeg")
+ COMMAND helpdesk(TEXT ="Helpdesk",IMAGE = "/home/ranjeet/Downloads/APT_APP/images/hpt.jpeg")
+ END
+
+LAYOUT
+HBOX
+GRID 
+{
+["                  "]
+                                                                                                   [lbl1]
+["                   "]
+["                  "]["                  "]
+["                  "]["                                                "]                         [txt002"    "]
+["                  "]["                                                "]
+["                  "]["                                                "]                        [I2GEN]
+["                  "]["                                                "]
+["                  "]["                                                "] 
+}
+
+END -- GRID 
+END --VBOX
+--END --LAYOUT
+
+
+  
+ATTRIBUTES 
+
+        LABEL lbl1:header_label1, text=%"  Apprtment Management System  ", justify=CENTER, STYLE="fontsize3";
+        IMAGE txt002  :txt002, IMAGE = "/home/ranjeet/Downloads/APT_APP/images/apt.webp";
+        LABEL I2GEN:header_label1, text=%"I2GEN", justify=CENTER, STYLE="fontsize1";
+END 

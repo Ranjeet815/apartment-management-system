@@ -1,0 +1,64 @@
+SCHEMA aptapp
+
+TOOLBAR
+  ITEM accept ( TEXT="Ok",     IMAGE="ok.png" , style="ToolBar" )
+  ITEM cancel ( TEXT="cancel", IMAGE="del.png" , style="toolbat2_style")
+  SEPARATOR
+   ITEM next   (IMAGE="next" , IMAGE="next.png"  )
+  ITEM previous  (IMAGE="previous" , IMAGE="return (1).png")
+  SEPARATOR
+  ITEM ADD ( TEXT="Add", IMAGE="add.png" )
+  ITEM Modify ( TEXT="Modify", IMAGE="edit.png" )
+  ITEM Delete ( TEXT="Delete", IMAGE="del.png" )
+  ITEM find ( TEXT="find", IMAGE="find.png" )
+END
+
+
+LAYOUT
+--GROUP group1(text=%"helpdesk", style="")
+GRID
+
+{
+                               [lbl1]
+                    <G                                                                                                                     >
+                    ["  "]
+[img1]["        "]  ["          "][mode_label                                 ]
+                    ["          "] Ticket_id  [f001                 ] ["     "]Complaint_Date:[f01                  ]
+                    ["          "]
+                    ["          "] Issue:       [f02                  ]
+                    ["          "]              [                     ]
+                    ["          "]              [                     ]
+                    ["          "] [""]
+                    ["          "] [sts]
+                    ["          "]
+                    ["          "] Unit_number:   [f03              ] ["     "]     Complaint_by:[f04                  ]
+                    ["          "] [""]
+                    ["          "] Attended_by:   [f05              ] ["     "]     Status:      [f06                  ]
+                    ["          "] [""]
+                    ["          "] Completed_Date:[f07              ]
+                    ["          "] [""]
+                              
+
+}   
+END 
+END
+
+TABLES   
+  helpdesk
+END
+
+ATTRIBUTES
+
+LABEL sts:header_label1, text=%"Complaint Status ", justify=CENTER, STYLE="fontsize1";
+LABEL lbl1:header_label1, text=%" Helpdesk", justify=CENTER, STYLE="fontsize3";
+EDIT  f001=helpdesk.complaint_id;
+LABEL mode_label = formonly.mode_label, COLOR=BLUE, STYLE="psModeLabel";
+DATETIMEEDIT  f01=helpdesk.helpdesk, REQUIRED, COMMENT = "This is the co-op store number";
+TEXTEDIT   f02=helpdesk.issue;
+EDIT f03=helpdesk.unit_number;
+EDIT f04=helpdesk.complaint_by;
+EDIT f05=helpdesk.attended_by;
+EDIT f06=helpdesk.status;
+DATETIMEEDIT  f07=helpdesk.completed_time;
+IMAGE img1  :img1, IMAGE = "/home/ranjeet/Downloads/APT_APP/images/helpdesk.jpeg";
+END

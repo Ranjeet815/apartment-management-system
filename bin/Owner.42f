@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Form name="Owner" build="3.20.08" sqlDbName="aptapp" width="117" height="13">
+  <ToolBar>
+    <ToolBarItem name="accept" text="Ok" image="ok.png" style="ToolBar"/>
+    <ToolBarItem name="cancel" text="cancel" image="del.png" style="toolbat2_style"/>
+    <ToolBarSeparator/>
+    <ToolBarItem name="next" image="next.png"/>
+    <ToolBarItem name="previous" image="return (1).png"/>
+    <ToolBarSeparator/>
+    <ToolBarItem name="add" text="Add" image="add.png"/>
+    <ToolBarItem name="modify" text="Modify" image="edit.png"/>
+    <ToolBarItem name="delete" text="Delete" image="del.png"/>
+    <ToolBarItem name="find" text="find" image="find.png"/>
+  </ToolBar>
+  <Grid width="117" height="13">
+    <Label name="header_label1" width="4" text=" Owner" justify="center" style="fontsize3" posY="0" posX="53" gridWidth="4">
+      <LStr text=" Owner"/>
+    </Label>
+    <Group posY="1" posX="39" gridWidth="78" gridHeight="13">
+      <Label text="     " posY="1" posX="1" gridWidth="7"/>
+      <Label text="     " posY="2" posX="1" gridWidth="7"/>
+      <FormField name="formonly.mode_label" colName="mode_label" fieldId="0" sqlTabName="formonly" noEntry="1" tabIndex="1">
+        <Label width="60" color="blue" style="psModeLabel" posY="2" posX="10" gridWidth="60"/>
+      </FormField>
+      <Label text="     " posY="3" posX="1" gridWidth="7"/>
+      <Label text="NAME#:" posY="3" posX="10" gridWidth="6"/>
+      <FormField name="owner.name" colName="name" sqlType="CHAR(20)" required="1" notNull="1" fieldId="1" sqlTabName="owner" tabIndex="2">
+        <Edit width="21" comment="This is the co-op store number" posY="3" posX="22" gridWidth="21"/>
+      </FormField>
+      <Label text="     " posY="4" posX="1" gridWidth="7"/>
+      <Label text="   " posY="4" posX="11" gridWidth="5"/>
+      <Label text="     " posY="5" posX="1" gridWidth="7"/>
+      <Label text="UNIT:" posY="5" posX="10" gridWidth="5"/>
+      <FormField name="owner.unit" colName="unit" sqlType="VARCHAR(20)" required="1" notNull="1" fieldId="2" sqlTabName="owner" tabIndex="3">
+        <Edit width="21" posY="5" posX="22" gridWidth="21"/>
+      </FormField>
+      <Label text="     " posY="6" posX="1" gridWidth="7"/>
+      <Label text="   " posY="6" posX="11" gridWidth="5"/>
+      <Label text="     " posY="7" posX="1" gridWidth="7"/>
+      <Label text="Permanent_address:" posY="7" posX="10" gridWidth="18"/>
+      <FormField name="owner.permanent_address" colName="permanent_address" sqlType="VARCHAR(50)" required="1" notNull="1" fieldId="3" sqlTabName="owner" tabIndex="4">
+        <Edit width="21" posY="7" posX="29" gridWidth="21"/>
+      </FormField>
+      <Label text="     " posY="8" posX="1" gridWidth="7"/>
+      <Label text="" posY="8" posX="11" gridWidth="2"/>
+      <Label text="     " posY="9" posX="1" gridWidth="7"/>
+      <Label text="purchased_on" posY="9" posX="10" gridWidth="12"/>
+      <Label text=":" posY="9" posX="26" gridWidth="2"/>
+      <FormField name="owner.purchased_on" colName="purchased_on" sqlType="DATE" fieldId="4" sqlTabName="owner" tabIndex="5">
+        <DateEdit width="19" posY="9" posX="29" gridWidth="21"/>
+      </FormField>
+      <Label text="     " posY="10" posX="1" gridWidth="7"/>
+      <Label text="   " posY="10" posX="11" gridWidth="5"/>
+    </Group>
+    <Image name="img1" width="4" image="/home/ranjeet/Downloads/APT_APP/images/Owner.jpeg" posY="3" posX="1" gridWidth="4"/>
+    <Label text="           " posY="3" posX="7" gridWidth="13"/>
+  </Grid>
+  <RecordView tabName="owner">
+    <Link colName="name" fieldIdRef="1"/>
+    <Link colName="unit" fieldIdRef="2"/>
+    <Link colName="permanent_address" fieldIdRef="3"/>
+    <Link colName="purchased_on" fieldIdRef="4"/>
+  </RecordView>
+  <RecordView tabName="formonly">
+    <Link colName="mode_label" fieldIdRef="0"/>
+  </RecordView>
+</Form>

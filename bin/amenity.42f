@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Form name="amenity" build="3.20.08" sqlDbName="aptapp" width="136" height="12">
+  <ToolBar>
+    <ToolBarItem name="accept" text="Ok" image="ok.png" style="ToolBar"/>
+    <ToolBarItem name="cancel" text="cancel" image="del.png" style="toolbat2_style"/>
+    <ToolBarSeparator/>
+    <ToolBarItem name="next" image="next.png"/>
+    <ToolBarItem name="previous" image="return (1).png"/>
+    <ToolBarSeparator/>
+    <ToolBarItem name="add" text="Add" image="add.png"/>
+    <ToolBarItem name="modify" text="Modify" image="edit.png"/>
+    <ToolBarItem name="delete" text="Delete" image="del.png"/>
+    <ToolBarItem name="find" text="find" image="find.png"/>
+  </ToolBar>
+  <Grid width="136" height="12">
+    <Label name="header_label1" width="4" text=" Amenity" justify="center" style="fontsize3" posY="0" posX="52" gridWidth="4">
+      <LStr text=" Amenity"/>
+    </Label>
+    <Group posY="1" posX="36" gridWidth="100" gridHeight="12">
+      <Label text="     " posY="1" posX="2" gridWidth="7"/>
+      <Label text="     " posY="2" posX="2" gridWidth="7"/>
+      <Label text="     " posY="3" posX="2" gridWidth="7"/>
+      <FormField name="formonly.mode_label" colName="mode_label" fieldId="0" sqlTabName="formonly" noEntry="1" tabIndex="1">
+        <Label width="42" color="blue" style="psModeLabel" posY="3" posX="22" gridWidth="42"/>
+      </FormField>
+      <Label text="     " posY="4" posX="2" gridWidth="7"/>
+      <Label text="amenity_name#:" posY="4" posX="22" gridWidth="14"/>
+      <FormField name="amenity.amenity_name" colName="amenity_name" sqlType="CHAR(20)" required="1" notNull="1" fieldId="1" sqlTabName="amenity" tabIndex="2">
+        <Edit width="21" comment="This is the co-op store number" posY="4" posX="42" gridWidth="21"/>
+      </FormField>
+      <Label text="     " posY="5" posX="2" gridWidth="7"/>
+      <Label text="   " posY="5" posX="23" gridWidth="5"/>
+      <Label text="     " posY="6" posX="2" gridWidth="7"/>
+      <Label text="charges:" posY="6" posX="22" gridWidth="8"/>
+      <FormField name="amenity.charges" colName="charges" sqlType="INTEGER" required="1" notNull="1" fieldId="2" sqlTabName="amenity" tabIndex="3">
+        <Edit width="21" posY="6" posX="42" gridWidth="21"/>
+      </FormField>
+      <Label text="     " posY="7" posX="2" gridWidth="7"/>
+      <Label text="   " posY="7" posX="23" gridWidth="5"/>
+      <Label text="     " posY="8" posX="2" gridWidth="7"/>
+      <Label text="daily_hourly:" posY="8" posX="22" gridWidth="13"/>
+      <FormField name="amenity.daily_hourly" colName="daily_hourly" sqlType="VARCHAR(20)" required="1" notNull="1" fieldId="3" sqlTabName="amenity" tabIndex="4">
+        <Edit width="21" posY="8" posX="42" gridWidth="21"/>
+      </FormField>
+      <Label text="     " posY="9" posX="2" gridWidth="7"/>
+      <Label text="" posY="9" posX="23" gridWidth="2"/>
+    </Group>
+    <Image name="img1" width="4" image="/home/ranjeet/Downloads/APT_APP/images/amenity.jpeg" posY="3" posX="2" gridWidth="4"/>
+    <Label text="      " posY="3" posX="10" gridWidth="8"/>
+  </Grid>
+  <RecordView tabName="amenity">
+    <Link colName="amenity_name" fieldIdRef="1"/>
+    <Link colName="charges" fieldIdRef="2"/>
+    <Link colName="daily_hourly" fieldIdRef="3"/>
+  </RecordView>
+  <RecordView tabName="formonly">
+    <Link colName="mode_label" fieldIdRef="0"/>
+  </RecordView>
+</Form>

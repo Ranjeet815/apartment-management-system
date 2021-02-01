@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Form name="apprtment" build="3.20.08" sqlDbName="aptapp" width="114" height="13">
+  <ToolBar>
+    <ToolBarItem name="accept" text="Ok" image="ok.png" style="ToolBar"/>
+    <ToolBarItem name="cancel" text="cancel" image="del.png" style="toolbat2_style"/>
+    <ToolBarSeparator/>
+    <ToolBarItem name="next" image="next.png"/>
+    <ToolBarItem name="previous" image="return (1).png"/>
+    <ToolBarSeparator/>
+    <ToolBarItem name="add" text="Add" image="add.png"/>
+    <ToolBarItem name="modify" text="Modify" image="edit.png"/>
+    <ToolBarItem name="delete" text="Delete" image="del.png"/>
+    <ToolBarItem name="find" text="find" image="find.png"/>
+  </ToolBar>
+  <Grid width="114" height="13">
+    <Label name="header_label1" width="4" text=" Apprtment" justify="center" style="fontsize3" posY="0" posX="51" gridWidth="4">
+      <LStr text=" Apprtment"/>
+    </Label>
+    <Group posY="1" posX="34" gridWidth="80" gridHeight="13">
+      <Label text="          " posY="1" posX="1" gridWidth="12"/>
+      <Label text="          " posY="2" posX="1" gridWidth="12"/>
+      <FormField name="formonly.mode_label" colName="mode_label" fieldId="0" sqlTabName="formonly" noEntry="1" tabIndex="1">
+        <Label width="60" color="blue" style="psModeLabel" posY="2" posX="15" gridWidth="60"/>
+      </FormField>
+      <Label text="          " posY="3" posX="1" gridWidth="12"/>
+      <Label text="Block#:" posY="3" posX="15" gridWidth="7"/>
+      <FormField name="apprtment.block" colName="block" sqlType="CHAR(1)" required="1" notNull="1" fieldId="1" sqlTabName="apprtment" tabIndex="2">
+        <Edit width="21" comment="This is the co-op store number" posY="3" posX="28" gridWidth="21"/>
+      </FormField>
+      <Label text="          " posY="4" posX="1" gridWidth="12"/>
+      <Label text="   " posY="4" posX="16" gridWidth="5"/>
+      <Label text="          " posY="5" posX="1" gridWidth="12"/>
+      <Label text="Floor:" posY="5" posX="15" gridWidth="6"/>
+      <FormField name="apprtment.floor" colName="floor" sqlType="INTEGER" required="1" notNull="1" fieldId="2" sqlTabName="apprtment" tabIndex="3">
+        <Edit width="21" posY="5" posX="28" gridWidth="21"/>
+      </FormField>
+      <Label text="          " posY="6" posX="1" gridWidth="12"/>
+      <Label text="   " posY="6" posX="16" gridWidth="5"/>
+      <Label text="          " posY="7" posX="1" gridWidth="12"/>
+      <Label text="Unit_num:" posY="7" posX="15" gridWidth="9"/>
+      <FormField name="apprtment.unit_num" colName="unit_num" sqlType="INTEGER" required="1" notNull="1" fieldId="3" sqlTabName="apprtment" tabIndex="4">
+        <Edit width="21" posY="7" posX="28" gridWidth="21"/>
+      </FormField>
+      <Label text="          " posY="8" posX="1" gridWidth="12"/>
+      <Label text="" posY="8" posX="16" gridWidth="2"/>
+      <Label text="          " posY="9" posX="1" gridWidth="12"/>
+      <Label text="Size" posY="9" posX="15" gridWidth="4"/>
+      <FormField name="apprtment.zise_sqft" colName="zise_sqft" sqlType="DECIMAL(16,2)" required="1" notNull="1" fieldId="4" sqlTabName="apprtment" tabIndex="5">
+        <Edit width="21" posY="9" posX="28" gridWidth="21"/>
+      </FormField>
+      <Label text="           " posY="10" posX="1" gridWidth="13"/>
+    </Group>
+    <Image name="img1" width="4" image="/home/ranjeet/Downloads/APT_APP/images/apart.jpeg" posY="4" posX="1" gridWidth="4"/>
+    <Label text="              " posY="4" posX="8" gridWidth="16"/>
+  </Grid>
+  <RecordView tabName="apprtment">
+    <Link colName="block" fieldIdRef="1"/>
+    <Link colName="floor" fieldIdRef="2"/>
+    <Link colName="unit_num" fieldIdRef="3"/>
+    <Link colName="zise_sqft" fieldIdRef="4"/>
+  </RecordView>
+  <RecordView tabName="formonly">
+    <Link colName="mode_label" fieldIdRef="0"/>
+  </RecordView>
+</Form>

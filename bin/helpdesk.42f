@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Form name="helpdesk" build="3.20.08" sqlDbName="aptapp" width="140" height="20">
+  <ToolBar>
+    <ToolBarItem name="accept" text="Ok" image="ok.png" style="ToolBar"/>
+    <ToolBarItem name="cancel" text="cancel" image="del.png" style="toolbat2_style"/>
+    <ToolBarSeparator/>
+    <ToolBarItem name="next" image="next.png"/>
+    <ToolBarItem name="previous" image="return (1).png"/>
+    <ToolBarSeparator/>
+    <ToolBarItem name="add" text="Add" image="add.png"/>
+    <ToolBarItem name="modify" text="Modify" image="edit.png"/>
+    <ToolBarItem name="delete" text="Delete" image="del.png"/>
+    <ToolBarItem name="find" text="find" image="find.png"/>
+  </ToolBar>
+  <Grid width="140" height="20">
+    <Label name="header_label1" width="4" text=" Helpdesk" justify="center" style="fontsize3" posY="0" posX="32" gridWidth="4">
+      <LStr text=" Helpdesk"/>
+    </Label>
+    <Group posY="1" posX="20" gridWidth="120" gridHeight="20">
+      <Label text="  " posY="1" posX="1" gridWidth="4"/>
+      <Label text="          " posY="2" posX="1" gridWidth="12"/>
+      <FormField name="formonly.mode_label" colName="mode_label" fieldId="1" sqlTabName="formonly" noEntry="1" tabIndex="1">
+        <Label width="43" color="blue" style="psModeLabel" posY="2" posX="15" gridWidth="43"/>
+      </FormField>
+      <Label text="          " posY="3" posX="1" gridWidth="12"/>
+      <Label text="Ticket_id" posY="3" posX="15" gridWidth="9"/>
+      <FormField name="helpdesk.complaint_id" colName="complaint_id" sqlType="INTEGER" fieldId="0" sqlTabName="helpdesk" tabIndex="2">
+        <Edit width="21" posY="3" posX="27" gridWidth="21"/>
+      </FormField>
+      <Label text="     " posY="3" posX="51" gridWidth="7"/>
+      <Label text="Complaint_Date:" posY="3" posX="59" gridWidth="15"/>
+      <FormField name="helpdesk.helpdesk" colName="helpdesk" sqlType="DATETIME YEAR TO MINUTE" fieldId="2" sqlTabName="helpdesk" required="1" tabIndex="3">
+        <DateTimeEdit width="21" comment="This is the co-op store number" posY="3" posX="75" gridWidth="21"/>
+      </FormField>
+      <Label text="          " posY="4" posX="1" gridWidth="12"/>
+      <Label text="          " posY="5" posX="1" gridWidth="12"/>
+      <Label text="Issue:" posY="5" posX="15" gridWidth="6"/>
+      <FormField name="helpdesk.issue" colName="issue" sqlType="VARCHAR(20)" required="1" notNull="1" fieldId="3" sqlTabName="helpdesk" tabIndex="4">
+        <TextEdit width="21" height="3" wantReturns="1" scroll="1" posY="5" posX="29" gridWidth="21" gridHeight="3"/>
+      </FormField>
+      <Label text="          " posY="6" posX="1" gridWidth="12"/>
+      <Label text="          " posY="7" posX="1" gridWidth="12"/>
+      <Label text="          " posY="8" posX="1" gridWidth="12"/>
+      <Label text="" posY="8" posX="16" gridWidth="2"/>
+      <Label text="          " posY="9" posX="1" gridWidth="12"/>
+      <Label name="header_label1" width="3" text="Complaint Status " justify="center" style="fontsize1" posY="9" posX="16" gridWidth="3">
+        <LStr text="Complaint Status "/>
+      </Label>
+      <Label text="          " posY="10" posX="1" gridWidth="12"/>
+      <Label text="          " posY="11" posX="1" gridWidth="12"/>
+      <Label text="Unit_number:" posY="11" posX="15" gridWidth="12"/>
+      <FormField name="helpdesk.unit_number" colName="unit_number" sqlType="INTEGER" required="1" notNull="1" fieldId="4" sqlTabName="helpdesk" tabIndex="5">
+        <Edit width="17" posY="11" posX="31" gridWidth="17"/>
+      </FormField>
+      <Label text="     " posY="11" posX="51" gridWidth="7"/>
+      <Label text="Complaint_by:" posY="11" posX="64" gridWidth="13"/>
+      <FormField name="helpdesk.complaint_by" colName="complaint_by" sqlType="VARCHAR(20)" required="1" notNull="1" fieldId="5" sqlTabName="helpdesk" tabIndex="6">
+        <Edit width="21" posY="11" posX="78" gridWidth="21"/>
+      </FormField>
+      <Label text="          " posY="12" posX="1" gridWidth="12"/>
+      <Label text="" posY="12" posX="16" gridWidth="2"/>
+      <Label text="          " posY="13" posX="1" gridWidth="12"/>
+      <Label text="Attended_by:" posY="13" posX="15" gridWidth="12"/>
+      <FormField name="helpdesk.attended_by" colName="attended_by" sqlType="VARCHAR(20)" required="1" notNull="1" fieldId="6" sqlTabName="helpdesk" tabIndex="7">
+        <Edit width="17" posY="13" posX="31" gridWidth="17"/>
+      </FormField>
+      <Label text="     " posY="13" posX="51" gridWidth="7"/>
+      <Label text="Status:" posY="13" posX="64" gridWidth="7"/>
+      <FormField name="helpdesk.status" colName="status" sqlType="VARCHAR(20)" required="1" notNull="1" fieldId="7" sqlTabName="helpdesk" tabIndex="8">
+        <Edit width="21" posY="13" posX="78" gridWidth="21"/>
+      </FormField>
+      <Label text="          " posY="14" posX="1" gridWidth="12"/>
+      <Label text="" posY="14" posX="16" gridWidth="2"/>
+      <Label text="          " posY="15" posX="1" gridWidth="12"/>
+      <Label text="Completed_Date:" posY="15" posX="15" gridWidth="15"/>
+      <FormField name="helpdesk.completed_time" colName="completed_time" sqlType="DATETIME YEAR TO MINUTE" fieldId="8" sqlTabName="helpdesk" tabIndex="9">
+        <DateTimeEdit width="17" posY="15" posX="31" gridWidth="17"/>
+      </FormField>
+      <Label text="          " posY="16" posX="1" gridWidth="12"/>
+      <Label text="" posY="16" posX="16" gridWidth="2"/>
+    </Group>
+    <Image name="img1" width="4" image="/home/ranjeet/Downloads/APT_APP/images/helpdesk.jpeg" posY="3" posX="1" gridWidth="4"/>
+    <Label text="        " posY="3" posX="7" gridWidth="10"/>
+  </Grid>
+  <RecordView tabName="helpdesk">
+    <Link colName="complaint_id" fieldIdRef="0"/>
+    <Link colName="helpdesk" fieldIdRef="2"/>
+    <Link colName="issue" fieldIdRef="3"/>
+    <Link colName="unit_number" fieldIdRef="4"/>
+    <Link colName="complaint_by" fieldIdRef="5"/>
+    <Link colName="attended_by" fieldIdRef="6"/>
+    <Link colName="status" fieldIdRef="7"/>
+    <Link colName="completed_time" fieldIdRef="8"/>
+  </RecordView>
+  <RecordView tabName="formonly">
+    <Link colName="mode_label" fieldIdRef="1"/>
+  </RecordView>
+</Form>

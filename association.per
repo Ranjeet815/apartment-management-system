@@ -1,0 +1,51 @@
+SCHEMA aptapp
+
+TOOLBAR
+  ITEM accept ( TEXT="Ok",     IMAGE="ok.png" , style="ToolBar" )
+  ITEM cancel ( TEXT="cancel", IMAGE="del.png" , style="toolbat2_style")
+  SEPARATOR
+   ITEM next   (IMAGE="next" , IMAGE="next.png"  )
+  ITEM previous  (IMAGE="previous" , IMAGE="return (1).png")
+  SEPARATOR
+  ITEM ADD ( TEXT="Add", IMAGE="add.png" )
+  ITEM Modify ( TEXT="Modify", IMAGE="edit.png" )
+  ITEM Delete ( TEXT="Delete", IMAGE="del.png" )
+  ITEM find ( TEXT="find", IMAGE="find.png" )
+END
+
+
+LAYOUT
+--GROUP group1(text=%"association", style="")
+GRID
+
+{
+                                                    [lbl1]
+                              <G                                                                                >                      
+                              ["     "]
+[img1] ["       "]            ["     "][mode_label                                                  ]
+                              ["     "] Name#:          [f01                  ]  
+                              ["     "] ["    "] 
+                              ["     "] Unit_number:    [f02                  ]
+                              ["     "] ["   "]
+                              ["     "] Position:       [f03                  ] 
+                              ["     "] [""]
+                              ["     "] Responsibility:[f04                   ]
+                              ["     "] [""]
+}   
+END 
+END
+
+TABLES   
+  association
+END
+
+ATTRIBUTES
+LABEL lbl1:header_label1, text=%" Association", justify=CENTER, STYLE="fontsize3";
+LABEL mode_label = formonly.mode_label, COLOR=BLUE, STYLE="psModeLabel";
+EDIT f01=association.name, REQUIRED, COMMENT = "This is the co-op store number";
+EDIT f02=association.unit_number;
+EDIT f03=association.position;
+EDIT f04=association.responsibility;
+IMAGE img1  :img1, IMAGE = "/home/ranjeet/Downloads/APT_APP/images/aso.png";
+
+END

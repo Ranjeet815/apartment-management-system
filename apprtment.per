@@ -1,0 +1,52 @@
+SCHEMA aptapp
+
+TOOLBAR
+  ITEM accept ( TEXT="Ok",     IMAGE="ok.png" , style="ToolBar" )
+  ITEM cancel ( TEXT="cancel", IMAGE="del.png" , style="toolbat2_style")
+  SEPARATOR
+   ITEM next   (IMAGE="next" , IMAGE="next.png"  )
+  ITEM previous  (IMAGE="previous" , IMAGE="return (1).png")
+  SEPARATOR
+  ITEM ADD ( TEXT="Add", IMAGE="add.png" )
+  ITEM Modify ( TEXT="Modify", IMAGE="edit.png" )
+  ITEM Delete ( TEXT="Delete", IMAGE="del.png" )
+  ITEM find ( TEXT="find", IMAGE="find.png" )
+END
+
+
+LAYOUT
+--GROUP group1(text=%"Apprtment", style="")
+GRID
+
+{
+                                                  [lbl1]
+                                  <G                                                                             >
+                                  ["          "]
+                                  ["          "][mode_label                                                  ]
+[img1] ["              "]         ["          "] Block#:     [f01                  ]  
+                                  ["          "] ["   "] 
+                                  ["          "] Floor:      [f02                  ]
+                                  ["          "] ["   "]
+                                  ["          "] Unit_num:   [f03                  ]
+                                  ["          "] [""]
+                                  ["          "] Size        [f04                  ]
+                                  ["           "]
+                                  
+}   
+END 
+END
+
+TABLES   
+  apprtment
+END
+
+ATTRIBUTES
+LABEL lbl1:header_label1, text=%" Apprtment", justify=CENTER, STYLE="fontsize3";
+LABEL mode_label = formonly.mode_label, COLOR=BLUE, STYLE="psModeLabel";
+EDIT f01=apprtment.block, REQUIRED, COMMENT = "This is the co-op store number";
+EDIT f02=apprtment.floor;
+EDIT f03=apprtment.unit_num;
+EDIT f04 = apprtment.zise_sqft;
+IMAGE img1  :img1, IMAGE = "/home/ranjeet/Downloads/APT_APP/images/apart.jpeg";
+
+END

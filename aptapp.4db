@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Schema id="{8be79536-86c6-4992-8ac3-9dfefc836a8e}" version="4.0">
+  <ExtractionSettings last="IBM Informix">
+    <ExtractionOptions casens="LowerCase" cvmeth="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ignerr="true" systab="false" type="IBM Informix"/>
+  </ExtractionSettings>
+  <Table name="amenity" isView="false" status="U">
+    <Column fglLength="20" fglType="256" name="amenity_name" notNull="true" order="1" status="U"/>
+    <Column fglLength="4" fglType="258" name="charges" notNull="true" order="2" status="U"/>
+    <Column fglLength="20" fglType="269" name="daily_hourly" notNull="true" order="3" status="U"/>
+  </Table>
+  <Table name="apprtment" isView="false" status="U">
+    <Column fglLength="1" fglType="256" name="block" notNull="true" order="1" status="U"/>
+    <Column fglLength="4" fglType="258" name="floor" notNull="true" order="2" status="U"/>
+    <Column fglLength="4" fglType="258" name="unit_num" notNull="true" order="3" status="U"/>
+    <Column fglLength="4098" fglType="261" name="zise_sqft" notNull="true" order="4" status="U"/>
+  </Table>
+  <Table name="association" isView="false" status="U">
+    <Column fglLength="20" fglType="256" name="name" notNull="true" order="1" status="U"/>
+    <Column fglLength="4" fglType="258" name="unit_number" notNull="true" order="2" status="U"/>
+    <Column fglLength="20" fglType="256" name="position" notNull="true" order="3" status="U"/>
+    <Column fglLength="20" fglType="269" name="responsibility" notNull="true" order="4" status="U"/>
+  </Table>
+  <Table name="helpdesk" isView="false" status="U">
+    <Column fglLength="4" fglType="2" name="complaint_id" notNull="false" order="1" status="U"/>
+    <Column fglLength="3080" fglType="10" name="helpdesk" notNull="false" order="2" status="U"/>
+    <Column fglLength="20" fglType="269" name="issue" notNull="true" order="3" status="U"/>
+    <Column fglLength="4" fglType="258" name="unit_number" notNull="true" order="4" status="U"/>
+    <Column fglLength="20" fglType="269" name="complaint_by" notNull="true" order="5" status="U"/>
+    <Column fglLength="20" fglType="269" name="attended_by" notNull="true" order="6" status="U"/>
+    <Column fglLength="20" fglType="269" name="status" notNull="true" order="7" status="U"/>
+    <Column fglLength="3080" fglType="10" name="completed_time" notNull="false" order="8" status="U"/>
+  </Table>
+  <Table name="owner" isView="false" status="U">
+    <Column fglLength="20" fglType="256" name="name" notNull="true" order="1" status="U"/>
+    <Column fglLength="20" fglType="269" name="unit" notNull="true" order="2" status="U"/>
+    <Column fglLength="50" fglType="269" name="permanent_address" notNull="true" order="3" status="U"/>
+    <Column fglLength="4" fglType="7" name="purchased_on" notNull="false" order="4" status="U"/>
+  </Table>
+  <Table name="payments" isView="false" status="U">
+    <Column fglLength="4" fglType="263" name="month_and_year" notNull="true" order="1" status="U"/>
+    <Column fglLength="4" fglType="258" name="unit_number" notNull="true" order="2" status="U"/>
+    <Column fglLength="4" fglType="263" name="paid_date" notNull="true" order="3" status="U"/>
+    <Column fglLength="20" fglType="269" name="paid_for" notNull="true" order="4" status="U"/>
+    <Column fglLength="20" fglType="269" name="paid_by" notNull="true" order="5" status="U"/>
+    <Column fglLength="20" fglType="269" name="collected_by" notNull="true" order="6" status="U"/>
+    <Column fglLength="4" fglType="258" name="amount" notNull="true" order="7" status="U"/>
+    <Column fglLength="20" fglType="269" name="remarks" notNull="true" order="8" status="U"/>
+  </Table>
+  <Table name="resident" isView="false" status="U">
+    <Column fglLength="20" fglType="256" name="name" notNull="true" order="1" status="U"/>
+    <Column fglLength="20" fglType="269" name="unit_num" notNull="true" order="2" status="U"/>
+    <Column fglLength="20" fglType="269" name="permanent_address" notNull="true" order="3" status="U"/>
+    <Column fglLength="4" fglType="258" name="contact_num" notNull="true" order="4" status="U"/>
+    <Column fglLength="20" fglType="269" name="resident_type" notNull="true" order="5" status="U"/>
+    <Column fglLength="4" fglType="263" name="date_of_join" notNull="true" order="6" status="U"/>
+  </Table>
+</Schema>

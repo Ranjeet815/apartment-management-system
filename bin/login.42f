@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Form name="login" build="3.20.08" width="43" height="15">
+  <Grid name="grid1" width="43" height="15">
+    <Label name="label3" width="40" text=" " posY="1" posX="2" gridWidth="40">
+      <LStr text=" "/>
+    </Label>
+    <Image name="image1" width="50px" image="logo.png" autoScale="1" sizePolicy="initial" height="50px" posY="2" posX="18" gridWidth="6"/>
+    <Label name="header_label" width="40" text="Login" justify="center" style="credential_header" posY="3" posX="2" gridWidth="40">
+      <LStr text="Login"/>
+    </Label>
+    <Label name="label4" width="40" text=" " posY="4" posX="2" gridWidth="40">
+      <LStr text=" "/>
+    </Label>
+    <FormField name="formonly.email" colName="email" fieldId="0" sqlTabName="formonly" tabIndex="1">
+      <Edit width="40" placeholder="Email ID" keyboardHint="email" posY="5" posX="2" gridWidth="40">
+        <LStr placeholder="Email ID"/>
+      </Edit>
+    </FormField>
+    <Label name="label1" width="40" text=" " posY="6" posX="2" gridWidth="40">
+      <LStr text=" "/>
+    </Label>
+    <FormField name="formonly.password" colName="password" fieldId="1" sqlTabName="formonly" tabIndex="2">
+      <Edit width="40" placeholder="Password" isPassword="1" posY="7" posX="2" gridWidth="40">
+        <LStr placeholder="Password"/>
+      </Edit>
+    </FormField>
+    <Label name="label5" width="40" text=" " posY="8" posX="2" gridWidth="40">
+      <LStr text=" "/>
+    </Label>
+    <Button name="login" width="40" text="LOGIN TO PORTAL" posY="9" posX="2" gridWidth="40" tabIndex="3">
+      <LStr text="LOGIN TO PORTAL"/>
+    </Button>
+    <Label name="label2" width="40" text=" " posY="10" posX="2" gridWidth="40">
+      <LStr text=" "/>
+    </Label>
+    <Label name="label7" width="40" text="" posY="11" posX="2" gridWidth="40">
+      <LStr text=""/>
+    </Label>
+    <Label name="label8" width="40" text="" posY="12" posX="2" gridWidth="40">
+      <LStr text=""/>
+    </Label>
+    <Button name="forgotpassword" width="16" text="Forgot your password?" style="brand_html" posY="13" posX="14" gridWidth="16" tabIndex="4">
+      <LStr text="Forgot your password?"/>
+    </Button>
+    <Label name="footer" width="41" text="" posY="14" posX="1" gridWidth="41">
+      <LStr text=""/>
+    </Label>
+  </Grid>
+  <RecordView tabName="formonly">
+    <Link colName="email" fieldIdRef="0"/>
+    <Link colName="password" fieldIdRef="1"/>
+  </RecordView>
+  <RecordView tabName="scr_credentials">
+    <Link colName="email" fieldIdRef="0"/>
+    <Link colName="password" fieldIdRef="1"/>
+  </RecordView>
+</Form>

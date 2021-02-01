@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Schema gstVersion="31400" id="{b77912c7-1608-4e61-a440-399ab86be759}" version="4.0">
+  <AGSettings version="1.1">
+    <DynamicProperties version="2">
+      <DynamicProperty description="Associated label when generating form" initialValue="" isDefaultInherited="false" isHidden="false" label="Label" name="label" readOnly="false" type="TEXT"/>
+      <DynamicProperty description="Associated widget" editorInfo="contains:ButtonEdit|CheckBox|ComboBox|DateEdit|DateTimeEdit|Edit|FFImage|FFLabel|Field|Phantom|ProgressBar|RadioGroup|Slider|SpinEdit|TextEdit|TimeEdit" initialValue="Edit" isDefaultInherited="false" isHidden="false" label="Widget" name="widget" readOnly="false" type="ENUM"/>
+      <DynamicPropertyGroup collapsed="false" description="Put user code to customize the application" label="Code Files" name="codeFiles" properties=""/>
+      <DynamicPropertyGroup collapsed="false" description="Put user code to customize the application" label="Code Links" name="codeLinks" properties=""/>
+      <DynamicPropertyGroup collapsed="false" description="Formfied properties" label="Formfield" name="formfieldGroup" properties="label;widget"/>
+    </DynamicProperties>
+    <NodeInfos version="1">
+      <NodeInfo mimeType="db/column" properties="widget;label"/>
+    </NodeInfos>
+  </AGSettings>
+  <ExtractionSettings/>
+  <Table active="true" name="seqreg" status="A" uuid="db/table2">
+    <Column fglLength="30" fglType="201" name="sr_name" notNull="true" order="1" status="A" uuid="db/column2"/>
+    <Column fglLength="4" fglType="2" name="sr_last" notNull="true" order="2" status="A" uuid="db/column4"/>
+    <Index indexColumns="sr_name" indexConstraint="primaryKey" name="pk_seqreg" status="A" uuid="db/index2"/>
+  </Table>
+  <Views ActiveView="View-1" showLabels="true">
+    <View Name="View-1">
+      <Layout>
+        <![CDATA[AAAAAgAAABIAZABiAC8AdABhAGIAbABlADJAdpAABaQAAEBqIAAGiAAAP5mZmZmZmZ4B]]>
+      </Layout>
+    </View>
+  </Views>
+</Schema>

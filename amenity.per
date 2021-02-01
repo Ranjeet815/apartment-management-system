@@ -1,0 +1,50 @@
+SCHEMA aptapp
+
+TOOLBAR
+  ITEM accept ( TEXT="Ok",     IMAGE="ok.png" , style="ToolBar" )
+  ITEM cancel ( TEXT="cancel", IMAGE="del.png" , style="toolbat2_style")
+  SEPARATOR
+   ITEM next   (IMAGE="next" , IMAGE="next.png"  )
+  ITEM previous  (IMAGE="previous" , IMAGE="return (1).png")
+  SEPARATOR
+  ITEM ADD ( TEXT="Add", IMAGE="add.png" )
+  ITEM Modify ( TEXT="Modify", IMAGE="edit.png" )
+  ITEM Delete ( TEXT="Delete", IMAGE="del.png" )
+  ITEM find ( TEXT="find", IMAGE="find.png" )
+END
+
+
+LAYOUT
+--GROUP group1(text=%"amenity", style="")
+GRID
+
+{
+                                                   [lbl1]
+                                    <G                                                                                                 >                       
+                                     ["     "]
+ [img1]  ["      "]                  ["     "]
+                                     ["     "]           [mode_label                                ] 
+                                     ["     "]            amenity_name#:     [f01                  ] 
+                                     ["     "]            ["   "] 
+                                     ["     "]            charges:           [f02                  ] 
+                                     ["     "]            ["   "]
+                                     ["     "]            daily_hourly:      [f03                  ]
+                                     ["     "]            [""]
+                                  
+}   
+END 
+END
+
+TABLES   
+  amenity
+END
+
+ATTRIBUTES
+LABEL lbl1:header_label1, text=%" Amenity", justify=CENTER, STYLE="fontsize3";
+LABEL mode_label = formonly.mode_label, COLOR=BLUE, STYLE="psModeLabel";
+EDIT f01=amenity.amenity_name, REQUIRED, COMMENT = "This is the co-op store number";
+EDIT f02=amenity.charges;
+EDIT f03=amenity.daily_hourly;
+IMAGE img1  :img1, IMAGE = "/home/ranjeet/Downloads/APT_APP/images/amenity.jpeg";
+
+END

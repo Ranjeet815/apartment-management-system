@@ -1,0 +1,61 @@
+SCHEMA aptapp
+TOOLBAR
+  ITEM accept ( TEXT="Ok",     IMAGE="ok.png" , style="ToolBar" )
+  ITEM cancel ( TEXT="cancel", IMAGE="del.png" , style="toolbat2_style")
+  SEPARATOR
+  ITEM next   (IMAGE="next" , IMAGE="next.png"  )
+  ITEM previous  (IMAGE="previous" , IMAGE="return (1).png")
+  SEPARATOR
+  ITEM ADD ( TEXT="Add", IMAGE="add.png" )
+  ITEM Modify ( TEXT="Modify", IMAGE="edit.png" )
+  ITEM Delete ( TEXT="Delete", IMAGE="del.png" )
+  ITEM find ( TEXT="find", IMAGE="find.png" )
+END
+
+LAYOUT
+--GROUP group1(text=%"payments", style="")
+GRID
+
+{
+                                                          [lbl1]
+                                      <G                                                                                >             
+                                      ["          "]
+[img1]["            "]                ["          "][mode_label                                                  ]
+                                      ["          "]Select Date#:     [f01                   ]  
+                                      ["          "] ["   "] 
+                                      ["          "] Unit_number:     [f02                   ]
+                                      ["          "] ["   "] 
+                                      ["          "] Paid_date:       [f03                   ]
+                                      ["          "] [""]
+                                      ["          "] Paid_for    :    [f04                   ]
+                                      ["          "] [""]
+                                      ["          "] Paid_by          [f05                   ]
+                                      ["          "] [""]
+                                      ["          "] Collected_by     [f06                   ]
+                                      ["          "] [" "]
+                                      ["          "] Amount           [f07                   ]
+                                      ["          "] [""]
+                                      ["          "] Remarks          [f08                   ]
+                                      ["          "]
+
+}   
+END 
+END
+
+TABLES   
+  payments
+END
+
+ATTRIBUTES
+LABEL lbl1:header_label1, text=%" Payments", justify=CENTER, STYLE="fontsize3";
+LABEL mode_label = formonly.mode_label, COLOR=BLUE, STYLE="psModeLabel";
+DATEEDIT  f01=payments.month_and_year, REQUIRED, COMMENT = "This is the co-op store number";
+EDIT f02=payments.unit_number;
+DATEEDIT f03=payments.paid_date;
+EDIT f04=payments.paid_for;
+EDIT f05 = payments.paid_by;
+EDIT f06 = payments.collected_by;
+EDIT f07 = payments.amount;
+EDIT f08 = payments.remarks;
+IMAGE img1  :img1, IMAGE = "/home/ranjeet/Downloads/APT_APP/images/payment.jpeg";
+END

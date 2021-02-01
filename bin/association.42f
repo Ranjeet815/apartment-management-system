@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Form name="association" build="3.20.08" sqlDbName="aptapp" width="113" height="12">
+  <ToolBar>
+    <ToolBarItem name="accept" text="Ok" image="ok.png" style="ToolBar"/>
+    <ToolBarItem name="cancel" text="cancel" image="del.png" style="toolbat2_style"/>
+    <ToolBarSeparator/>
+    <ToolBarItem name="next" image="next.png"/>
+    <ToolBarItem name="previous" image="return (1).png"/>
+    <ToolBarSeparator/>
+    <ToolBarItem name="add" text="Add" image="add.png"/>
+    <ToolBarItem name="modify" text="Modify" image="edit.png"/>
+    <ToolBarItem name="delete" text="Delete" image="del.png"/>
+    <ToolBarItem name="find" text="find" image="find.png"/>
+  </ToolBar>
+  <Grid width="113" height="12">
+    <Label name="header_label1" width="4" text=" Association" justify="center" style="fontsize3" posY="0" posX="53" gridWidth="4">
+      <LStr text=" Association"/>
+    </Label>
+    <Group posY="1" posX="30" gridWidth="83" gridHeight="12">
+      <Label text="     " posY="1" posX="1" gridWidth="7"/>
+      <Label text="     " posY="2" posX="1" gridWidth="7"/>
+      <FormField name="formonly.mode_label" colName="mode_label" fieldId="0" sqlTabName="formonly" noEntry="1" tabIndex="1">
+        <Label width="60" color="blue" style="psModeLabel" posY="2" posX="10" gridWidth="60"/>
+      </FormField>
+      <Label text="     " posY="3" posX="1" gridWidth="7"/>
+      <Label text="Name#:" posY="3" posX="10" gridWidth="6"/>
+      <FormField name="association.name" colName="name" sqlType="CHAR(20)" required="1" notNull="1" fieldId="1" sqlTabName="association" tabIndex="2">
+        <Edit width="21" comment="This is the co-op store number" posY="3" posX="27" gridWidth="21"/>
+      </FormField>
+      <Label text="     " posY="4" posX="1" gridWidth="7"/>
+      <Label text="    " posY="4" posX="11" gridWidth="6"/>
+      <Label text="     " posY="5" posX="1" gridWidth="7"/>
+      <Label text="Unit_number:" posY="5" posX="10" gridWidth="12"/>
+      <FormField name="association.unit_number" colName="unit_number" sqlType="INTEGER" required="1" notNull="1" fieldId="2" sqlTabName="association" tabIndex="3">
+        <Edit width="21" posY="5" posX="27" gridWidth="21"/>
+      </FormField>
+      <Label text="     " posY="6" posX="1" gridWidth="7"/>
+      <Label text="   " posY="6" posX="11" gridWidth="5"/>
+      <Label text="     " posY="7" posX="1" gridWidth="7"/>
+      <Label text="Position:" posY="7" posX="10" gridWidth="9"/>
+      <FormField name="association.position" colName="position" sqlType="CHAR(20)" required="1" notNull="1" fieldId="3" sqlTabName="association" tabIndex="4">
+        <Edit width="21" posY="7" posX="27" gridWidth="21"/>
+      </FormField>
+      <Label text="     " posY="8" posX="1" gridWidth="7"/>
+      <Label text="" posY="8" posX="11" gridWidth="2"/>
+      <Label text="     " posY="9" posX="1" gridWidth="7"/>
+      <Label text="Responsibility:" posY="9" posX="10" gridWidth="15"/>
+      <FormField name="association.responsibility" colName="responsibility" sqlType="VARCHAR(20)" required="1" notNull="1" fieldId="4" sqlTabName="association" tabIndex="5">
+        <Edit width="22" posY="9" posX="26" gridWidth="22"/>
+      </FormField>
+      <Label text="     " posY="10" posX="1" gridWidth="7"/>
+      <Label text="" posY="10" posX="11" gridWidth="2"/>
+    </Group>
+    <Image name="img1" width="4" image="/home/ranjeet/Downloads/APT_APP/images/aso.png" posY="3" posX="1" gridWidth="4"/>
+    <Label text="       " posY="3" posX="8" gridWidth="9"/>
+  </Grid>
+  <RecordView tabName="association">
+    <Link colName="name" fieldIdRef="1"/>
+    <Link colName="unit_number" fieldIdRef="2"/>
+    <Link colName="position" fieldIdRef="3"/>
+    <Link colName="responsibility" fieldIdRef="4"/>
+  </RecordView>
+  <RecordView tabName="formonly">
+    <Link colName="mode_label" fieldIdRef="0"/>
+  </RecordView>
+</Form>

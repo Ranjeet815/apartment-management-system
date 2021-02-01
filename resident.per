@@ -1,0 +1,54 @@
+SCHEMA aptapp
+TOOLBAR
+  ITEM accept ( TEXT="Ok",     IMAGE="ok.png" , style="ToolBar" )
+  ITEM cancel ( TEXT="cancel", IMAGE="del.png" , style="toolbat2_style")
+  SEPARATOR
+  ITEM next   (IMAGE="next" , IMAGE="next.png"  )
+  ITEM previous  (IMAGE="previous" , IMAGE="return (1).png")
+  SEPARATOR
+  ITEM ADD ( TEXT="Add", IMAGE="add.png" )
+  ITEM Modify ( TEXT="Modify", IMAGE="edit.png" )
+  ITEM Delete ( TEXT="Delete", IMAGE="del.png" )
+  ITEM find ( TEXT="find", IMAGE="find.png" )
+END
+
+LAYOUT
+--GROUP group1(text=%"Resident", style="")
+GRID
+
+{
+                                                           [lbl1]
+                                     <G                                                                             >         
+                                     ["        "]
+[img1] ["        "]                  ["        "][mode_label                                                  ]
+                                     ["        "] NAME#:            [f01                   ]  
+                                     ["        "] ["   "] 
+                                     ["        "] Unit_num:         [f02                   ]
+                                     ["        "] ["   "]
+                                     ["        "] Permanent_address:[f03                   ]
+                                     ["        "] [""]
+                                     ["        "] Contact_num    :  [f04                   ]
+                                     ["        "] [""]
+                                     ["        "] Resident_type:    [f05                   ]
+                                     ["        "][""]
+                                     ["        "]Date_of_join :     [f06                   ] 
+                                     ["        "][""]
+}   
+END 
+END
+
+TABLES   
+  resident
+END
+
+ATTRIBUTES
+LABEL lbl1:header_label1, text=%" Resident", justify=CENTER, STYLE="fontsize3";
+LABEL mode_label = formonly.mode_label, COLOR=BLUE, STYLE="psModeLabel";
+EDIT f01=resident.name, REQUIRED, COMMENT = "This is the co-op store number";
+EDIT f02=resident.unit_num;
+EDIT f03=resident.permanent_address;
+EDIT f04=resident.contact_num;
+EDIT f05 =  resident.resident_type;
+DATEEDIT  f06=resident.date_of_join;
+IMAGE img1  :img1, IMAGE = "/home/ranjeet/Downloads/APT_APP/images/resident.jpeg";
+END

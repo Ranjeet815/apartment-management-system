@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Form name="forgot" build="3.20.08" width="33" height="13">
+  <Grid name="grid1" width="33" height="13">
+    <Label name="label3" width="30" text="" posY="0" posX="2" gridWidth="30">
+      <LStr text=""/>
+    </Label>
+    <Image name="image1" width="50px" image="logo.png" autoScale="1" sizePolicy="initial" height="50px" posY="1" posX="12" gridWidth="9"/>
+    <Label name="forgotpasswordtitle" width="24" text="Forgot your Password" style="credential_header" posY="2" posX="8" gridWidth="24">
+      <LStr text="Forgot your Password"/>
+    </Label>
+    <Label name="label2" width="30" text=" " posY="3" posX="2" gridWidth="30">
+      <LStr text=" "/>
+    </Label>
+    <FormField name="formonly.email" colName="email" sqlType="VARCHAR" fieldId="0" sqlTabName="formonly" tabIndex="1">
+      <Edit width="30" placeholder="email address" keyboardHint="email" scroll="1" posY="4" posX="2" gridWidth="30">
+        <LStr placeholder="email address"/>
+      </Edit>
+    </FormField>
+    <Label name="label6" width="30" text=" " posY="5" posX="2" gridWidth="30">
+      <LStr text=" "/>
+    </Label>
+    <Button name="forgotpassword" width="30" text="Recover Password" posY="6" posX="2" gridWidth="30" tabIndex="2">
+      <LStr text="Recover Password"/>
+    </Button>
+    <Label name="label9" width="30" text=" " posY="7" posX="2" gridWidth="30">
+      <LStr text=" "/>
+    </Label>
+    <Button name="login" width="9" text="login" posY="8" posX="23" gridWidth="9" tabIndex="3">
+      <LStr text="login"/>
+    </Button>
+    <Label name="footer" width="30" text="" posY="9" posX="2" gridWidth="30">
+      <LStr text=""/>
+    </Label>
+  </Grid>
+  <RecordView tabName="formonly">
+    <Link colName="email" fieldIdRef="0"/>
+  </RecordView>
+  <RecordView tabName="scr_forgot_password">
+    <Link colName="email" fieldIdRef="0"/>
+  </RecordView>
+</Form>
